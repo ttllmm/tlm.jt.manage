@@ -1,4 +1,4 @@
-package com.jt.manage.controller.web;
+package com.jt.manage.controller;
 
 import java.util.List;
 

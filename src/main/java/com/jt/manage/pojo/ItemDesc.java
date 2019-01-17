@@ -8,6 +8,7 @@ import com.jt.common.po.BasePojo;
 @Table(name="tb_item_desc")
 public class ItemDesc extends BasePojo{
 	@Id//主键要和item的id对应
+	
 	private Long itemId;
 	private String itemDesc;
 	public Long getItemId() {

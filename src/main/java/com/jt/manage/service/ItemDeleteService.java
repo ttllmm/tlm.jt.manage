@@ -15,16 +15,18 @@ import com.jt.manage.pojo.Item;
 public class ItemDeleteService {
  @Autowired
  	private DeleteItemMapper deleteItemMapper;
-	public void deleteItem(Item item) {
+	public void deleteItem(Long[] ids) {
 		
 		//Long id=item.getId();
-		deleteItemMapper.deleteByPrimaryKey(item);
+		for (Long id:ids){
+		deleteItemMapper.deleteByPrimaryKey(id);
+//		deleteItemMapper.
 	//	deleteItemMapper.delete(item);
-		item.setStatus(1);
-		item.setCreated(new Date());
-		item.setUpdated(new Date());
-		System.out.println(item);
-		
+//		item.setStatus(1);
+//		item.setCreated(new Date());
+//		item.setUpdated(new Date());
+//		System.out.println(item);
+		}
 	}
 	
 }

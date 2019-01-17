@@ -42,8 +42,8 @@
     		<scope>provided</scope>
 		</dependency>
 		<dependency>
-    		 <groupId>1809-jt-spring-boot</groupId>
-  			<artifactId>commen</artifactId>
+    		 <groupId>tlm-jt-common</groupId>
+  			<artifactId>common</artifactId>
   			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

@@ -14,3 +14,58 @@ webapp
 porm黏贴(common)依赖
 controllercontrllericontrollercontrllercontrollercontrellercontrellercontreller
 conreollercontrollercontrollerdatasorcesdatasuorce
+springbootspringbootspringbootspringbootspringbootspringbootspringbootspringbootspringbootspringbootspringbootspringboot
+前台三级结构数据
+需求
+前台系统的界面
+前台启动
+没有任何动作的时候发起
+数据的封装做成一个工具类
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklnmnopqrsruvwxyzabcdefghijklmnopqrstuvwxyz
+jsonp (jsonproperty)三级目录  u:url n:name i:item这里的uni   工具类叫Itemcatutil在课堂笔记工具类里    
+
+需要一个类类型1 ItemCatResult
+
+private List<类型2>data
+需要类型2
+private String u
+private String n
+private List<?>i
+复制两个pojo在manage里
+直接kaobei就行              对象{u,n,list<>}     所有商品
+                                                                                                                      类1 
+                                                                                                                           具体的商品                                                                       
+                                                                                                                       类2
+
+0: [item 1 , item 2]
+前台带钓鱼后台返回的json
+
+同源策略的限制
+ajax无法解析后台的json字符串数据
+
+解决方法 修改数据格式
+利用script标签的src属性获取manage后台的json字符出串本地js代码{"key" 1809good}百年城test({"key"1809good})这就是jsonp的使用原理
+什么是jsonp
+基于json数据的使用格式,以方法名称包含json数据d
+
+测试js的同源策略
+	需要2个webapp格式的应用,jquery的js代码
+	
+	localhost:9001访问localhost:9001的json字符串可以解析................
+    localhost:9000访问localhost:9001的json字符串不能解析
+    string  callback
+    拼接  JSONPobject导报          web  端口8092 要记得在nginx配置   httpclient是第三方写好的jar包可以模拟内部发出请求
+    
+    测试代码:
+      需要httpclient依赖 已经在common里写了看一下
+      
+      json对象转化成item对象........................
+      用objectmapper的readvalue方法
+      
+      
+    httpclient 和jsonp都是跨域发送请求
+    
+    httpclient 返回的数据可以是各种格式
+    写redis 时记得打开Linux的redis       回显 图片价值,desc,前台后台 ...............................
+    
+

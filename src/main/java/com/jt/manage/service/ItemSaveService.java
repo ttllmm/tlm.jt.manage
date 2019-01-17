@@ -30,7 +30,7 @@ public class ItemSaveService {
 		ItemDesc itemDesc=new ItemDesc();
 		itemDesc.setItemId(item.getId());
 		itemDesc.setItemDesc(desc);
-		itemDesc.setCreated(new Date());
+		itemDesc.setCreated(item.getCreated());
 		itemDesc.setUpdated(itemDesc.getCreated());
 		descMapper.insertSelective(itemDesc);
 		

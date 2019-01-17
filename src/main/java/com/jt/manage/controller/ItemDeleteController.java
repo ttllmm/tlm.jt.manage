@@ -1,7 +1,8 @@
-package com.jt.manage.controller.web;
+package com.jt.manage.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jt.common.vo.SysResult;
@@ -14,11 +15,11 @@ public class ItemDeleteController {
 	@Autowired
 	private ItemDeleteService itemDeleteService;
 	@RequestMapping("item/delete")
-    public SysResult ItemSave(Item item){
+    public SysResult ItemSave(@RequestParam Long[] ids){
 		System.out.println("bagayalu");
 		SysResult result=new SysResult();
 		try {
-			itemDeleteService.deleteItem(item);
+			itemDeleteService.deleteItem(ids);
 			result.setMsg("祝贺大神删除商品成功");
 			result.setStatus(200);
 			return result;
